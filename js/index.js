@@ -46,10 +46,26 @@ function makeBolder(event){
 
 mainHeader.addEventListener('click', makeBolder)
 
-//scroll
+//dblclick
 
 const mainNav = document.querySelector('h2')
 
 mainNav.addEventListener('dblclick', function (event){
     event.target.style.textAlign = "center"
+})
+
+//drag, dragend
+
+const allImgs = document.querySelectorAll("img")
+
+function makeRound(event){
+    event.target.style.borderRadius = "50%";
+}
+function makeSquare(event){
+    event.target.style.borderRadius = "0";
+}
+
+allImgs.forEach(element => {
+    element.addEventListener('drag', makeRound)
+    element.addEventListener('dragend', makeSquare)
 })
