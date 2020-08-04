@@ -48,6 +48,8 @@ mainHeader.addEventListener('click', makeBolder)
 
 //scroll
 
-document.html.addEventListener('scroll', function (event){
-    event.target.style.backgroundColor = "pink"
+const mainNav = document.querySelector('h2')
+
+mainNav.addEventListener('dblclick', function (event){
+    event.target.style.textAlign = "center"
 })
