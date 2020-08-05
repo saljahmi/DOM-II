@@ -69,3 +69,35 @@ allImgs.forEach(element => {
     element.addEventListener('drag', makeRound)
     element.addEventListener('dragend', makeSquare)
 })
+
+// wheel
+
+const buttons = document.querySelectorAll('.btn');
+
+function thickBorder(event){
+    event.target.style.borderWidth = "5px";
+}
+
+buttons.forEach(element =>
+    addEventListener('wheel', thickBorder)
+)
+
+// mousemove
+
+const destSection = document.querySelector('.content-pick')
+destSection.addEventListener('mousemove', event => {
+    event.target.style.margin = "20px"
+})
+
+// copy
+
+const topText = document.querySelector('p')
+topText.addEventListener('copy', event => {
+    event.target.style.backgroundColor = "pink"
+})
+
+// mousedown
+
+mainHeader.addEventListener('mousedown', event => {
+    event.target.style.fontSize = "70px"
+})
